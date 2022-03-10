@@ -104,6 +104,10 @@ elseif game.PlaceId == 3956818381 then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcframe
     end)
     
+    MainSection:NewButton("other ninja legends GUI", "credits to Ronin", function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/gajFx25i"))()
+            end)
+    
     MainSection:NewToggle("Auto buy all swords", "Auto buys all swords", function(v)
         getgenv().buyswords = v
         while true do
@@ -125,10 +129,6 @@ elseif game.PlaceId == 3956818381 then
             local Event = game:GetService("Players").LocalPlayer.ninjaEvent
             Event:FireServer(A_1, A_2)
             wait(0.5)
-
-            MainSection:NewButton("other ninja legends GUI", "credits to Ronin", function()
-                loadstring(game:HttpGet("https://pastebin.com/raw/gajFx25i"))()
-            end)
         end
     end)
 end
