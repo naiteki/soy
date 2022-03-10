@@ -42,12 +42,16 @@ if game.PlaceId == 155615604 then
 
     PlayerSection:NewSlider("Jumppower", "put on your trampoline shoes", 250, 50, function(v)
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
-    end) --end of PL
+    end) 
+
+    PlayerSection:NewButton("Inf Yield", "executes admin", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end)
 
     local credits = Window:NewTab("Credits")
     local creditsSection = credits:NewSection("credits")
     creditsSection:NewLabel("Naiteki#7777 - did most of everything")
-    creditsSection:NewLabel("xHeptic - UI")
+    creditsSection:NewLabel("xHeptic - UI") --end of prison life 
 
 elseif game.PlaceId == 3956818381 then
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
