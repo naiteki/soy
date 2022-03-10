@@ -61,6 +61,11 @@ elseif game.PlaceId == 3956818381 then
     local Main = Window:NewTab("Main")
     local MainSection = Main:NewSection("epic stuff")
 
+    local credits = Window:NewTab("Credits")
+            local creditsSection = credits:NewSection("credits")
+            creditsSection:NewLabel("Naiteki#7777 - did most of everything")
+            creditsSection:NewLabel("xHeptic - UI")
+
     MainSection:NewToggle("Auto Swing", "Make your player autoswing", function(v)
         getgenv().autoswing = v
         while true do
@@ -120,11 +125,6 @@ elseif game.PlaceId == 3956818381 then
             local Event = game:GetService("Players").LocalPlayer.ninjaEvent
             Event:FireServer(A_1, A_2)
             wait(0.5)
-
-            local credits = Window:NewTab("Credits")
-            local creditsSection = credits:NewSection("credits")
-            creditsSection:NewLabel("Naiteki#7777 - did most of everything")
-            creditsSection:NewLabel("xHeptic - UI")
         end
     end)
 end
