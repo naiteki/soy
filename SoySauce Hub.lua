@@ -125,6 +125,10 @@ elseif game.PlaceId == 3956818381 then
             local Event = game:GetService("Players").LocalPlayer.ninjaEvent
             Event:FireServer(A_1, A_2)
             wait(0.5)
+
+            MainSection:NewButton("other ninja legends GUI", "credits to Ronin", function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/gajFx25i"))()
+            end)
         end
     end)
 end
