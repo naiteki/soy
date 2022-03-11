@@ -129,6 +129,31 @@ elseif game.PlaceId == 3956818381 then
             local Event = game:GetService("Players").LocalPlayer.ninjaEvent
             Event:FireServer(A_1, A_2)
             wait(0.5)
+            
         end
     end)
+elseif game.PlaceId == 6872265039 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("soy sauce hub - bed wars", "Synapse")
+
+    local MainBW = Window:NewTab("player")
+    local CombatBW = Window:NewTab("combat")
+
+    local CombatBWSec = CombatBW:NewSection("idfk how to make a bedwars script so here a really good gui")
+    local MainBWSec = MainBW:NewSection("localplayer")
+
+    MainBWSec:NewSlider("walkspeed", "increases walkspeed", 500, 16, function(BWs) -- 500 (MaxValue) | 0 (MinValue)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = BWs
+    end)
+    MainBWSec:NewSlider("jump power", "increases jump power", 500, 16, function(BWj) -- 500 (MaxValue) | 0 (MinValue)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = BWj
+    end)
+    CombatBWSec:NewButton("open Vape V4 gui because Naiteki sucks at coding", "ew who likes naiteki he sucks", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+    end)
+    local credits = Window:NewTab("Credits")
+    local creditsSection = credits:NewSection("credits")
+    creditsSection:NewLabel("Naiteki#7777 - did most of everything")
+    creditsSection:NewLabel("xHeptic - UI")
+    creditsSection:NewLabel("7GrandDadPGN - Vape V4 (github)")
 end
